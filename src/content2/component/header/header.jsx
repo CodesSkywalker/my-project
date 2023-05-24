@@ -1,11 +1,9 @@
 const Header = () => {
 	return (
 		<>
-			
-			<div className="w-full h-[92.1vh]">
-				
+			<div className="w-full bg-cover h-full object-cover">
 				<video
-					className="w-full h-full object-cover"
+					className="w-full h-full min-w-full max-w-none"
 					src="/public/video/video2.mp4"
 					autoPlay
 					muted

@@ -2,7 +2,7 @@ import React from "react";
 import "./histori.css"
 const AcorDeon = () => {
 	return (
-		<div id="bG" className="h-full border-y-[4px] border-solid border-black bg-cover bg-fixed  flex items-center flex-col" >
+		<div id="bGg" className="h-full border-y-[4px] border-solid border-black bg-cover bg-fixed  flex items-center flex-col" >
 			<h2 className="inline-block my-16">"Історія Кам'янеця-Подільського"</h2>
 			<div className="flex flex-col md:flex-row w-full mb-10 md:space-x-8  h-full items-center justify-around">
 				<div className="md:w-1/2 lg:ml-10  md:mb-0">

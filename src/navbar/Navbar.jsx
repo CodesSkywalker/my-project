@@ -1,23 +1,27 @@
 import { Navbar } from "flowbite-react";
+import  './style.css'
+import React from "react";
+import Draver from './Draver'
+import { useDisclosure } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-
 function Nav() {
+	const { isOpen, onOpen, onClose } = useDisclosure();
+	const btnRef = React.useRef();
 	return (
 		<>
-			<Navbar className="border-none flex justify-between  m-auto sticky top-0 left-0 z-10">
+			<Navbar className="border-none flex justify-between fixed z-50  items-center m-auto  w-full  ">
 				<Navbar.Brand>
-					
-					<span className="self-center whitespace-nowrap text-red-700 text-2xl font-bold dark:text-white">
-						Logo
-					</span>
+					<Link to="/">
+						<span className="self-center whitespace-nowrap text-red-700 text-2xl font-bold dark:text-white">
+							Logo
+						</span>
+					</Link>
 				</Navbar.Brand>
-				<Navbar.Toggle />
-                <Navbar.Collapse>
-                
-				<Link className="inline-block text-center md:border-none border-b-2 border-solid text-lg font-bold text-gray-500 hover:text-black" to="/">Кам'янець-Подільськ</Link>
-				<Link className="inline-block text-center md:border-none border-b-2 border-solid text-lg font-bold text-gray-500 hover:text-black"  to="/site2">Хортиця</Link>
-                
-                </Navbar.Collapse>
+				<ion-icon  name="menu" ref={btnRef} size="large"  className=" text-[64px] cursor-pointer" colorScheme="teal" onClick={onOpen}>
+					Open
+				</ion-icon>
+			<Draver onClose={onClose } btnRef={btnRef} isOpen={isOpen}/>
+				
 			</Navbar>
 		</>
 	);

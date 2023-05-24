@@ -1,5 +1,5 @@
 import React from "react";
-import "./histori.css"
+import "./histori2.css"
 const AcorDeon = () => {
 	return (
 		<div id="bG" className="h-full border-y-[4px] border-solid border-black bg-cover bg-fixed  flex items-center flex-col" >
